@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+}
+
+.app {
+    height: 100vh;
+    background-color: #23272F;
+    color: #eee;
+}
+
+.app>h1 {
+    color: #149ECA;
+}
