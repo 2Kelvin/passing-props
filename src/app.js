@@ -5,7 +5,7 @@ const person = {
 
 function Avatar({ person, size }) {
     return (
-        <Img
+        <img
             className="avatar_img"
             src={person.img_src}
             alt={person._name}
@@ -15,20 +15,35 @@ function Avatar({ person, size }) {
     );
 }
 
+function FriendsCast() {
+    return (
+        <div className="friends_cast">
+            <Avatar
+                person={{
+                    _name: "Monica Geller",
+                    img_src: ""
+                }}
+                size={120}
+            />
+        </div>
+    );
+}
+
+function ShowName() {
+    return (
+        <img
+            src="../images/theme.png"
+            alt="friends"
+            className="show_image"
+        />
+    );
+}
+
 export default function App() {
     return (
         <div className="app">
-            <h1>Hello Props</h1>
-            <h3>F.R.I.E.N.D.S</h3>
-            <>
-                <Avatar
-                    person={{
-                        _name: "Monica Geller",
-                        img_src: ""
-                    }}
-                    size={120}
-                />
-            </>
+            <ShowName />
+            <FriendsCast />
         </div>
     );
 
@@ -46,5 +61,5 @@ root.render(<App />);
 // you can pass any JS value thro props: object, array, function...
 // props => 'information that you pass to a JSX tag'
 // props examples => className, src, alt, width, height (for <img/>)....
-// the above props fir the <img/> are predefined
-// but you can pass custom props to your own custom components
+// the above props for the <img/> are predefined, ReactDOM conforms to HTML standards
+// but you can pass any props to your own custom components to customize them
