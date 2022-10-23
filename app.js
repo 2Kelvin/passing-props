@@ -1,18 +1,13 @@
-var person = {
-    _name: "Joey Tribbiani",
-    img_src: ""
-};
-
 function Avatar(_ref) {
     var person = _ref.person,
         size = _ref.size;
 
     return React.createElement("img", {
-        className: "avatar_img",
         src: person.img_src,
         alt: person._name,
         width: size,
-        height: size
+        height: size,
+        className: "avatar_img"
     });
 }
 
@@ -23,9 +18,44 @@ function FriendsCast() {
         React.createElement(Avatar, {
             person: {
                 _name: "Monica Geller",
-                img_src: ""
+                img_src: "../images/monica.png"
             },
-            size: 120
+            size: 150
+        }),
+        React.createElement(Avatar, {
+            person: {
+                _name: "Monica Geller",
+                img_src: "../images/chandler.png"
+            },
+            size: 150
+        }),
+        React.createElement(Avatar, {
+            person: {
+                _name: "Monica Geller",
+                img_src: "../images/ross.png"
+            },
+            size: 150
+        }),
+        React.createElement(Avatar, {
+            person: {
+                _name: "Monica Geller",
+                img_src: "../images/rachael.png"
+            },
+            size: 150
+        }),
+        React.createElement(Avatar, {
+            person: {
+                _name: "Monica Geller",
+                img_src: "../images/joey.png"
+            },
+            size: 150
+        }),
+        React.createElement(Avatar, {
+            person: {
+                _name: "Monica Geller",
+                img_src: "../images/phoebes.png"
+            },
+            size: 150
         })
     );
 }
@@ -60,3 +90,7 @@ root.render(React.createElement(App, null));
 // props examples => className, src, alt, width, height (for <img/>)....
 // the above props for the <img/> are predefined, ReactDOM conforms to HTML standards
 // but you can pass any props to your own custom components to customize them
+// there are 2 steps to adding props: 
+// passing props => from parent to child
+// reading props => inside child's ({}) and using them inside it's {}
+//  you can make each component display its own unique info by changing the values of the porps passed

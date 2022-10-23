@@ -11,3 +11,8 @@
 .app>h1 {
     color: #149ECA;
 }
+
+.avatar_img {
+    border-radius: 50%;
+    margin: 1em;
+}
