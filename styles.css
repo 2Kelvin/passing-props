@@ -8,6 +8,7 @@
     color: #23272F;
     display: grid;
     place-content: center;
+    justify-items: center;
 }
 
 .card {

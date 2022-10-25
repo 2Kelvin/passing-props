@@ -17,7 +17,7 @@ function CardWrap(_ref2) {
 
     return React.createElement(
         "div",
-        { className: "card" },
+        { className: "card centerMe" },
         children
     );
 }
@@ -108,7 +108,16 @@ export default function App() {
         "div",
         { className: "app" },
         React.createElement(ShowName, null),
-        React.createElement(FriendsCast, null)
+        React.createElement(FriendsCast, null),
+        React.createElement(
+            CardWrap,
+            null,
+            React.createElement(
+                "p",
+                null,
+                "The Best Comedy Show of All Time"
+            )
+        )
     );
 }
 
@@ -154,3 +163,5 @@ root.render(React.createElement(App, null));
 // eg. <Card> <Avatar/> </Card> ==> the children prop here is set to the <Avatar/> component
 // the parent <Card> component is a wrapper 
 // the wrapper component unlike other components, has both the opening & closing tag
+// these components are used as: visual wrappers, cards, panels, grids...
+// you can insert any JSX components inside of them

@@ -12,7 +12,7 @@ function Avatar({ person, size = 120 }) { //prop 'size' has been assigned a defa
 
 function CardWrap({ children }) {
     return (
-        <div className="card">
+        <div className="card centerMe">
             {children}
         </div>
     );
@@ -112,6 +112,9 @@ export default function App() {
         <div className="app">
             <ShowName />
             <FriendsCast />
+            <CardWrap>
+                <p>The Best Comedy Show of All Time</p>
+            </CardWrap>
         </div>
     );
 
@@ -160,3 +163,5 @@ root.render(<App />);
 // eg. <Card> <Avatar/> </Card> ==> the children prop here is set to the <Avatar/> component
 // the parent <Card> component is a wrapper 
 // the wrapper component unlike other components, has both the opening & closing tag
+// these components are used as: visual wrappers, cards, panels, grids...
+// you can insert any JSX components inside of them
