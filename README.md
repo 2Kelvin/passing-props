@@ -1,6 +1,6 @@
 # passing-props
 
-![oh-friends](https://user-images.githubusercontent.com/85868026/197712518-471f68a4-7146-4fe8-b18e-cc66d339163e.png)
+![sitcom](https://user-images.githubusercontent.com/85868026/197724811-4da77dc8-3b09-4bfa-8792-bf7ebcf7b198.png)
 
 In this read/ project, I learnt:
 - To fix react's body whitespace at top of website => add `*{margin; 0}` in parent CSS file
