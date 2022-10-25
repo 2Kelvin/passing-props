@@ -165,3 +165,18 @@ root.render(<App />);
 // the wrapper component unlike other components, has both the opening & closing tag
 // these components are used as: visual wrappers, cards, panels, grids...
 // you can insert any JSX components inside of them
+
+// a component may receive different props over time
+// Props are not always static
+// Props reflect a component’s data at any point in time, rather than only in the beginning
+// *** However, props are immutable
+// if props change, the old one's will be destroyed and the new props passed in...
+// ...i.e the old props are never updated to new values but cast away as an object and a new prop object with new values passed thro component
+// *** Don’t try to change props
+// ...instead use 'state' whenever you want to change the UI
+// i.e you can create new props values thro state
+
+// To pass props, add them to the JSX, just like you would with HTML attributes
+// to read props, destructure passed props inside the component funcion's brackets ()
+// props default values area assigned when the props is missong or undefined
+// every render destroys old props and renders new ones
