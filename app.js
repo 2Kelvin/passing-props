@@ -7,57 +7,91 @@ function Avatar(_ref) {
         src: person.img_src,
         alt: person._name,
         width: size,
-        height: "180",
+        height: "165",
         className: "avatar_img"
     });
+}
+
+function CardWrap(_ref2) {
+    var children = _ref2.children;
+
+    return React.createElement(
+        "div",
+        { className: "card" },
+        children
+    );
 }
 
 function FriendsCast() {
     return React.createElement(
         "div",
         { className: "friends_cast" },
-        React.createElement(Avatar, {
-            person: {
-                _name: "Monica Geller",
-                img_src: "../images/monica.png"
-            },
-            size: 130
-        }),
-        React.createElement(Avatar, {
-            person: {
-                _name: "Chandler Bing",
-                img_src: "../images/chandler.png"
-            },
-            size: 130
-        }),
-        React.createElement(Avatar, {
-            person: {
-                _name: "Ross Geller",
-                img_src: "../images/ross.png"
-            },
-            size: 130
-        }),
-        React.createElement(Avatar, {
-            person: {
-                _name: "Rachael Green",
-                img_src: "../images/rachael.png"
-            },
-            size: 130
-        }),
-        React.createElement(Avatar, {
-            person: {
-                _name: "Joey Tribbiani",
-                img_src: "../images/joey.png"
-            },
-            size: 130
-        }),
-        React.createElement(Avatar, {
-            person: {
-                _name: "Phoebe Buffet",
-                img_src: "../images/phoebes.png"
-            },
-            size: 130
-        })
+        React.createElement(
+            CardWrap,
+            null,
+            React.createElement(Avatar, {
+                person: {
+                    _name: "Monica Geller",
+                    img_src: "../images/monica.png"
+                },
+                size: 150
+            })
+        ),
+        React.createElement(
+            CardWrap,
+            null,
+            React.createElement(Avatar, {
+                person: {
+                    _name: "Chandler Bing",
+                    img_src: "../images/chandler.png"
+                },
+                size: 150
+            })
+        ),
+        React.createElement(
+            CardWrap,
+            null,
+            React.createElement(Avatar, {
+                person: {
+                    _name: "Ross Geller",
+                    img_src: "../images/ross.png"
+                },
+                size: 150
+            })
+        ),
+        React.createElement(
+            CardWrap,
+            null,
+            React.createElement(Avatar, {
+                person: {
+                    _name: "Rachael Green",
+                    img_src: "../images/rachael.png"
+                },
+                size: 150
+            })
+        ),
+        React.createElement(
+            CardWrap,
+            null,
+            React.createElement(Avatar, {
+                person: {
+                    _name: "Joey Tribbiani",
+                    img_src: "../images/joey.png"
+                },
+                size: 150
+            })
+        ),
+        React.createElement(
+            CardWrap,
+            null,
+            React.createElement(Avatar, {
+                person: {
+                    _name: "Phoebe Buffet",
+                    img_src: "../images/phoebes.png"
+                },
+                size: 150
+            })
+        )
     );
 }
 
@@ -108,3 +142,15 @@ root.render(React.createElement(App, null));
 // ...it'll be used when the size prop is not passed on the <Avatar/> component
 // if you pass 'size={null}' or 'size={0}' the default value will not be used; the values specified are the ones that'll be passed to size prop
 // however, if 'size={undefined}' the default value will be used
+
+// if a parent component passes all the props to a child, you can use use a 'spread syntax' to represent this
+// ... e.g. FriendsCast(...props){ <Avatar {...props}/> }
+// this is preferred if the parent doesn't use the props directly || & instead the child is the only one using the props
+// this method forwards all the parent props to the child without listing all their names exclusively
+// this method should be used in restraint/ not all the time...
+// if you find yourself using it a lot, it means you should split your code into smaller components
+
+// when you nest a JSX component inside another JSX component, the parent component receives the child component in a prop called 'children'
+// eg. <Card> <Avatar/> </Card> ==> the children prop here is set to the <Avatar/> component
+// the parent <Card> component is a wrapper 
+// the wrapper component unlike other components, has both the opening & closing tag
