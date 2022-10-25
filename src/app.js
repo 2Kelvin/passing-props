@@ -12,7 +12,7 @@ function Avatar({ person, size = 120 }) { //prop 'size' has been assigned a defa
 
 function CardWrap({ children }) {
     return (
-        <div className="card centerMe">
+        <div className="card">
             {children}
         </div>
     );

@@ -34,3 +34,8 @@
     width: 100%;
     border-radius: 15px;
 }
+
+.app .card p {
+    font-weight: 600;
+    font-size: 1.2em;
+}

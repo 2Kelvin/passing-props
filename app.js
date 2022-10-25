@@ -17,7 +17,7 @@ function CardWrap(_ref2) {
 
     return React.createElement(
         "div",
-        { className: "card centerMe" },
+        { className: "card" },
         children
     );
 }
